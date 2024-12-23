@@ -529,6 +529,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .profile-txt {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center horizontally */
     flex-direction: column;
 }
 .single-profile {
