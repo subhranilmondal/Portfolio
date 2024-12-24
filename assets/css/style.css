@@ -694,23 +694,28 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .client-item {
     text-align: center;
-    padding: 20px; /* Padding around each grid item */
+    padding: 20px; /* Padding around the grid item */
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff; /* Keep a clean background */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    height: 800px; /* Ensure all items have consistent height */
 }
 
 .client-item img {
-    width: 100%; /* Make the image take the full width of its container */
-    height: auto; /* Maintain the image's original aspect ratio */
-    max-width: 800px; /* Set a maximum width for the images */
-    max-height: 700px; /* Set a maximum height for the images */
-    object-fit: contain; /* Ensure the image fits within the container without distortion */
-    margin-bottom: 15px; /* Add spacing below the image */
+    width: auto; /* Allow natural width */
+    height: auto; /* Allow natural height */
+    max-width: 100%; /* Prevent images from overflowing */
+    max-height: 100%; /* Ensure images stay within their container */
+    margin-bottom: 15px;
+    object-fit: contain; /* Prevent cropping or distortion */
+    display: block;
     border-radius: 5px; /* Optional: Rounded edges */
 }
-
 
 .client-item p {
     font-size: 20px; /* Readable font size */
@@ -720,7 +725,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .client-item:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
+    transform: translateY(-10px); /* Slight hover lift */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
@@ -730,9 +735,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 
-    .client-item img {
-        width: 600px; /* Reduce width for smaller screens */
-        height: 500px; /* Reduce height for smaller screens */
+    .client-item {
+        height: 600px; /* Adjust height for smaller screens */
     }
 }
 
@@ -741,9 +745,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
     }
 
-    .client-item img {
-        width: 500px; /* Further reduce width */
-        height: 400px; /* Further reduce height */
+    .client-item {
+        height: 500px; /* Adjust height further */
     }
 }
 
@@ -752,9 +755,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         grid-template-columns: 1fr; /* 1 column for mobile screens */
     }
 
+    .client-item {
+        height: auto; /* Let height adjust naturally */
+    }
+
     .client-item img {
-        width: 100%; /* Full width for very small screens */
-        height: auto; /* Maintain aspect ratio */
+        max-height: auto; /* Let height adjust proportionally */
     }
 }
 
