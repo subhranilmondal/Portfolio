@@ -694,7 +694,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .client-item {
     text-align: center;
-    padding: 25px; /* Slightly increase padding for more spacing inside the grid item */
+    padding: 30px; /* Slightly increased padding */
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -702,15 +702,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .client-item img {
-    max-width: 90%; /* Reduce width slightly for better balance */
-    max-height: 350px; /* Increase height for better visibility */
-    margin-bottom: 15px;
+    max-width: 800px; /* Set the width to 800px */
+    max-height: 700px; /* Set the height to 700px */
+    margin-bottom: 15px; /* Space below the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Slight rounding for smooth edges */
 }
 
 .client-item p {
-    font-size: 18px; /* Keep text size readable */
+    font-size: 20px; /* Slightly larger text size for readability */
     font-weight: 600;
     color: #333;
     margin-top: 10px;
@@ -722,9 +722,25 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+
+    .client-item img {
+        max-width: 600px; /* Reduce size for medium screens */
+        max-height: 500px;
+    }
+}
+
 @media (max-width: 768px) {
     .clients-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .client-item img {
+        max-width: 500px; /* Reduce size further for smaller screens */
+        max-height: 400px;
     }
 }
 
@@ -732,7 +748,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .clients-grid {
         grid-template-columns: 1fr; /* 1 column for mobile screens */
     }
+
+    .client-item img {
+        max-width: 100%; /* Full width for very small screens */
+        max-height: auto; /* Let height adjust proportionally */
+    }
 }
+
 
 /*-------------------------------------
         11. Contact
