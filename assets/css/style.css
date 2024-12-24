@@ -671,13 +671,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*-------------------------------------
         10. Clients
 --------------------------------------*/
-/* .clients {padding-top: 50px;}
+.clients {padding-top: 50px;}
 .clients-area {
     display: flex;
     align-items: center;
     height: 250px;
 }
-.clients-area .item {padding: 0 25px;}
+/* .clients-area .item {padding: 0 25px;}
 
 .clients .clients-area .owl-carousel .owl-item img {
     display: block;
@@ -687,37 +687,40 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 } */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Increase the minimum width of grid items */
+    gap: 30px; /* Add more space between grid items */
     padding: 20px;
 }
 
 .client-item {
     text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for each item */
+    padding: 20px; /* Add more padding around the grid item */
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff; /* Ensure the background is clean and clear */
 }
 
 .client-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    max-width: 100%; /* Allow the image to fully utilize the grid item's width */
+    max-height: 500px; /* Increase the maximum height of the images */
+    margin-bottom: 15px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add slight rounding */
 }
 
 .client-item p {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 18px; /* Increase font size for better visibility */
+    font-weight: 600;
     color: #333;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .client-item:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
+
 
 
 
