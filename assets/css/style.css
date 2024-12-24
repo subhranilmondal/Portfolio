@@ -694,30 +694,30 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .client-item {
     text-align: center;
-    padding: 30px; /* Slightly increased padding */
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    padding: 20px; /* Padding around each grid item */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff; /* Keep a clean background */
 }
 
 .client-item img {
-    max-width: 800px; /* Set the width to 800px */
-    max-height: 700px; /* Set the height to 700px */
+    width: 800px; /* Fixed width */
+    height: 700px; /* Fixed height */
+    object-fit: cover; /* Ensure the image fits properly */
     margin-bottom: 15px; /* Space below the image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Slight rounding for smooth edges */
+    border-radius: 5px; /* Optional: Rounded edges */
 }
 
 .client-item p {
-    font-size: 20px; /* Slightly larger text size for readability */
+    font-size: 20px; /* Readable font size */
     font-weight: 600;
     color: #333;
     margin-top: 10px;
 }
 
 .client-item:hover {
-    transform: translateY(-10px); /* Slight hover lift */
+    transform: translateY(-10px); /* Slight lift on hover */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
@@ -728,8 +728,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     }
 
     .client-item img {
-        max-width: 600px; /* Reduce size for medium screens */
-        max-height: 500px;
+        width: 600px; /* Reduce width for smaller screens */
+        height: 500px; /* Reduce height for smaller screens */
     }
 }
 
@@ -739,8 +739,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     }
 
     .client-item img {
-        max-width: 500px; /* Reduce size further for smaller screens */
-        max-height: 400px;
+        width: 500px; /* Further reduce width */
+        height: 400px; /* Further reduce height */
     }
 }
 
@@ -750,10 +750,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     }
 
     .client-item img {
-        max-width: 100%; /* Full width for very small screens */
-        max-height: auto; /* Let height adjust proportionally */
+        width: 100%; /* Full width for very small screens */
+        height: auto; /* Maintain aspect ratio */
     }
 }
+
 
 
 
