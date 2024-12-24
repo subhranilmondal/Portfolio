@@ -687,43 +687,52 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 } */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Increase the minimum width of grid items */
-    gap: 30px; /* Add more space between grid items */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px; /* Space between grid items */
     padding: 20px;
 }
 
 .client-item {
     text-align: center;
-    padding: 20px; /* Add more padding around the grid item */
+    padding: 25px; /* Slightly increase padding for more spacing inside the grid item */
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff; /* Ensure the background is clean and clear */
+    background: #fff; /* Keep a clean background */
 }
 
 .client-item img {
-    max-width: 100%; /* Allow the image to fully utilize the grid item's width */
-    max-height: 500px; /* Increase the maximum height of the images */
+    max-width: 90%; /* Reduce width slightly for better balance */
+    max-height: 350px; /* Increase height for better visibility */
     margin-bottom: 15px;
     height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Add slight rounding */
+    border-radius: 5px; /* Slight rounding for smooth edges */
 }
 
 .client-item p {
-    font-size: 18px; /* Increase font size for better visibility */
+    font-size: 18px; /* Keep text size readable */
     font-weight: 600;
     color: #333;
     margin-top: 10px;
 }
 
 .client-item:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
+    transform: translateY(-10px); /* Slight hover lift */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
 
-
-
+@media (max-width: 480px) {
+    .clients-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
 
 /*-------------------------------------
         11. Contact
