@@ -692,28 +692,46 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .clients-area {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the content horizontally */
-    height: 1000px;
+    justify-content: center;
+    padding-bottom: 50px; /* Add spacing below the section */
 }
 
-.clients-area .item {
-    padding: 0 40px; /* Increased padding between items for spacing */
+.clients-area .owl-carousel .item {
+    text-align: center; /* Center the content inside each item */
+    padding: 10px; /* Add spacing around each item */
 }
 
-.clients .clients-area .owl-carousel .owl-item img {
+.clients-area .owl-carousel .item a {
+    display: inline-block; /* Ensure anchor tag wraps content correctly */
+}
+
+.clients-area .owl-carousel .item img {
     display: block;
-    max-width: 800px; /* Adjust maximum width to make the images larger */
-    max-height: 800px; /* Set a consistent height for images */
-    margin: 0 auto; /* Center the images within their container */
-    height: auto;
-    border-radius: 0;
-    transition: transform 0.3s ease-in-out; /* Add hover effect */
+    max-width: 200px; /* Adjust width to make the images larger */
+    max-height: 200px; /* Maintain consistent height for all images */
+    margin: 0 auto; /* Center the image inside its container */
+    height: auto; /* Keep the aspect ratio intact */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
 /* Hover Effect */
-.clients .clients-area .owl-carousel .owl-item img:hover {
+.clients-area .owl-carousel .item img:hover {
     transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
+
+/* Optional Responsive Design */
+@media (max-width: 768px) {
+    .clients-area .owl-carousel .item img {
+        max-width: 200px; /* Adjust size for smaller screens */
+        max-height: 200px;
+    }
+
+    .clients-area .owl-carousel .item {
+        padding: 5px; /* Reduce spacing on smaller screens */
+    }
+}
+
+
 
 /*-------------------------------------
         11. Contact
