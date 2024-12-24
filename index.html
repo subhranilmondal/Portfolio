@@ -752,33 +752,33 @@
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-													<input type="text" class="form-control" id="name" placeholder="Name*" name="name" required>
+													<input type="text" class="form-control" id="from_name" name="from_name" placeholder="Name*" required>
 												</div>
 											</div>
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email" required>
+													<input type="email" class="form-control" id="reply_to" name="reply_to" placeholder="Email*" required>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" required>
+													<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message" required></textarea>
+													<textarea class="form-control" rows="8" id="message" name="message" placeholder="Message" required></textarea>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<button type="button" id="submitBtn" class="contact-btn">Submit</button>
+													<button type="submit" id="button" class="contact-btn">Send Email</button>
 												</div>
 											</div>
 										</div>
@@ -816,7 +816,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>		
 		<!--/.contact-->
 		<!--contact end -->
 
@@ -876,45 +876,36 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 
-		<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		<script>
-			// Initialize EmailJS with your Public Key
-			emailjs.init("B8dSeCwEk-8FCEsT0");
+		// Initialize EmailJS
+		emailjs.init('B8dSeCwEk-8FCEsT0');
 
-			document.getElementById("submitBtn").addEventListener("click", function () {
-				// Collect form data
-				const name = document.getElementById("name").value;
-				const email = document.getElementById("email").value;
-				const subject = document.getElementById("subject").value;
-				const message = document.getElementById("message").value;
+		// Form submission handling
+		const btn = document.getElementById('button');
 
-				// Validate form fields
-				if (!name || !email || !subject || !message) {
-					alert("Please fill out all fields.");
-					return;
-				}
+		document.getElementById('contactForm').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent form from submitting normally
 
-				// Send email using EmailJS
-				emailjs
-					.send("service_z79kfkn", "template_jwo75jj", {
-						from_name: name,
-						reply_to: email,
-						subject: subject, // Include subject in the message
-						message: message,
-					})
-					.then(
-						function (response) {
-							alert("Email sent successfully!");
-							// Optionally reset the form
-							document.getElementById("contactForm").reset();
-						},
-						function (error) {
-							alert("Failed to send email. Please try again later.");
-							console.error("EmailJS error:", error);
-						}
-					);
+			btn.value = 'Sending...'; // Update button text to indicate progress
+
+			const serviceID = 'service_z79kfkn'; // Your EmailJS Service ID
+			const templateID = 'template_jwo75jj'; // Your EmailJS Template ID
+
+			// Send the form using EmailJS
+			emailjs.sendForm(serviceID, templateID, this)
+			.then(() => {
+				btn.value = 'Send Email'; // Reset button text
+				alert('Email sent successfully!'); // Show success message
+				this.reset(); // Reset the form fields
+			}, (err) => {
+				btn.value = 'Send Email'; // Reset button text
+				alert('Failed to send email. Please try again later.'); // Show error message
+				console.error('Error:', err); // Log error details to console
 			});
+		});
 		</script>
+
 
         
     </body>
