@@ -685,51 +685,40 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     height: auto;
     border-radius:0;
 } */
-.clients {
-    padding-top: 50px;
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
 }
 
-.clients-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 50px; /* Add spacing below the section */
+.client-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for each item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.clients-area .owl-carousel .item {
-    text-align: center; /* Center the content inside each item */
-    padding: 10px; /* Add spacing around each item */
+.client-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.clients-area .owl-carousel .item a {
-    display: inline-block; /* Ensure anchor tag wraps content correctly */
+.client-item p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 5px;
 }
 
-.clients-area .owl-carousel .item img {
-    display: block;
-    max-width: 200px; /* Adjust width to make the images larger */
-    max-height: 200px; /* Maintain consistent height for all images */
-    margin: 0 auto; /* Center the image inside its container */
-    height: auto; /* Keep the aspect ratio intact */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+.client-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-/* Hover Effect */
-.clients-area .owl-carousel .item img:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
-}
-
-/* Optional Responsive Design */
-@media (max-width: 768px) {
-    .clients-area .owl-carousel .item img {
-        max-width: 200px; /* Adjust size for smaller screens */
-        max-height: 200px;
-    }
-
-    .clients-area .owl-carousel .item {
-        padding: 5px; /* Reduce spacing on smaller screens */
-    }
-}
 
 
 
