@@ -702,9 +702,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .client-item img {
-    max-width: 800px; /* Set the width to 800px */
-    max-height: 700px; /* Set the height to 700px */
-    margin-bottom: 15px; /* Space below the image */
+    max-width: 1500px; /* Set the width to 800px */
+    max-height: 1200px; /* Set the height to 700px */
+    margin-bottom: 10px; /* Space below the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Slight rounding for smooth edges */
 }
