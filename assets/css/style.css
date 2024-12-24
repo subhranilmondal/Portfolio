@@ -687,30 +687,30 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 } */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 30px; /* Space between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase the minimum width of grid items */
+    gap: 30px; /* Add more space between grid items */
     padding: 20px;
 }
 
 .client-item {
     text-align: center;
-    padding: 20px; /* Padding around each grid item */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Add more padding around the grid item */
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff; /* Keep a clean background */
+    background: #fff; /* Ensure the background is clean and clear */
 }
 
 .client-item img {
-    width: 900px; /* Fixed width */
-    height: 800px; /* Fixed height */
-    object-fit: cover; /* Ensure the image fits properly */
-    margin-bottom: 15px; /* Space below the image */
-    border-radius: 5px; /* Optional: Rounded edges */
+    max-width: 100%; /* Allow the image to fully utilize the grid item's width */
+    max-height: 300px; /* Increase the maximum height of the images */
+    margin-bottom: 15px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add slight rounding */
 }
 
 .client-item p {
-    font-size: 20px; /* Readable font size */
+    font-size: 18px; /* Increase font size for better visibility */
     font-weight: 600;
     color: #333;
     margin-top: 10px;
@@ -719,40 +719,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .client-item:hover {
     transform: translateY(-10px); /* Slight lift on hover */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-    }
-
-    .client-item img {
-        width: 600px; /* Reduce width for smaller screens */
-        height: 500px; /* Reduce height for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    }
-
-    .client-item img {
-        width: 500px; /* Further reduce width */
-        height: 400px; /* Further reduce height */
-    }
-}
-
-@media (max-width: 480px) {
-    .clients-grid {
-        grid-template-columns: 1fr; /* 1 column for mobile screens */
-    }
-
-    .client-item img {
-        width: 100%; /* Full width for very small screens */
-        height: auto; /* Maintain aspect ratio */
-    }
 }
 
 
