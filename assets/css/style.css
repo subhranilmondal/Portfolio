@@ -687,7 +687,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 } */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase the minimum width of grid items */
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Increase the minimum width of grid items */
     gap: 30px; /* Add more space between grid items */
     padding: 20px;
 }
@@ -703,7 +703,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .client-item img {
     max-width: 100%; /* Allow the image to fully utilize the grid item's width */
-    max-height: 300px; /* Increase the maximum height of the images */
+    max-height: 700px; /* Increase the maximum height of the images */
     margin-bottom: 15px;
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional: Add slight rounding */
