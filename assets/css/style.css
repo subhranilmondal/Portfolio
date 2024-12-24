@@ -693,7 +693,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     display: flex;
     align-items: center;
     justify-content: center; /* Center the content horizontally */
-    height: 250px;
+    height: 1000px;
 }
 
 .clients-area .item {
@@ -702,8 +702,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .clients .clients-area .owl-carousel .owl-item img {
     display: block;
-    max-width: 150px; /* Adjust maximum width to make the images larger */
-    max-height: 150px; /* Set a consistent height for images */
+    max-width: 800px; /* Adjust maximum width to make the images larger */
+    max-height: 800px; /* Set a consistent height for images */
     margin: 0 auto; /* Center the images within their container */
     height: auto;
     border-radius: 0;
