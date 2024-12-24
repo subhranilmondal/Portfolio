@@ -702,12 +702,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .client-item img {
-    width: 800px; /* Fixed width */
-    height: 700px; /* Fixed height */
-    object-fit: cover; /* Ensure the image fits properly */
-    margin-bottom: 15px; /* Space below the image */
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain the image's original aspect ratio */
+    max-width: 800px; /* Set a maximum width for the images */
+    max-height: 700px; /* Set a maximum height for the images */
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
+    margin-bottom: 15px; /* Add spacing below the image */
     border-radius: 5px; /* Optional: Rounded edges */
 }
+
 
 .client-item p {
     font-size: 20px; /* Readable font size */
