@@ -671,7 +671,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*-------------------------------------
         10. Clients
 --------------------------------------*/
-.clients {padding-top: 50px;}
+/* .clients {padding-top: 50px;}
 .clients-area {
     display: flex;
     align-items: center;
@@ -684,6 +684,35 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     width: 100%;
     height: auto;
     border-radius:0;
+} */
+.clients {
+    padding-top: 50px;
+}
+
+.clients-area {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    height: 250px;
+}
+
+.clients-area .item {
+    padding: 0 40px; /* Increased padding between items for spacing */
+}
+
+.clients .clients-area .owl-carousel .owl-item img {
+    display: block;
+    max-width: 150px; /* Adjust maximum width to make the images larger */
+    max-height: 150px; /* Set a consistent height for images */
+    margin: 0 auto; /* Center the images within their container */
+    height: auto;
+    border-radius: 0;
+    transition: transform 0.3s ease-in-out; /* Add hover effect */
+}
+
+/* Hover Effect */
+.clients .clients-area .owl-carousel .owl-item img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
 /*-------------------------------------
